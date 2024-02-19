@@ -1,0 +1,17 @@
+{% extends "form/base.html" %}
+
+{% block title %} Template Form {% endblock %}
+
+
+{% block content %}
+<div style="margin-top:30px">
+    <h1> Are You sure you want to delete Classroom {{ classroom.name }} ?</h1>
+    <form method="post" action="{% url 'classroom_delete' classroom.id %} ">
+        {% csrf_token %}
+        <a href="{% url 'crud_classroom' %}" class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn btn-danger" >Delete</button>
+    </form>
+</div>
+
+
+{% endblock %}

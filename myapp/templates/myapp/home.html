@@ -1,0 +1,15 @@
+{% extends "form/base.html" %}
+
+{% block title %}
+
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+<h1>Welcome to home</h1>
+<a class="icon-link" href="{% url 'crud_home' %}">
+  <svg class="bi" aria-hidden="true"><use xlink:href=""></use></svg>
+  CRUD
+</a>
+{% endblock %}
